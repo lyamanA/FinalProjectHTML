@@ -1,0 +1,187 @@
+body {
+    padding-top: 50px;
+    color: #959595
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: #000
+}
+
+.feature {
+    background-color: #9acd32;
+    color: #adff2f
+}
+
+.article-intro {
+    margin-bottom: 25px
+}
+
+.footer-blurb {
+    padding: 30px 0;
+    background-color: #daa520;
+    color: #000
+}
+
+.footer-blurb-item {
+    padding: 30px
+}
+
+.small-print {
+    background-color: #fff;
+    padding: 30px 0
+}
+
+.feature,.page-intro,.article-intro,.footer-blurb,.small-print {
+    text-align: center
+}
+
+.hero-section {
+    background-color: rgb(154, 205, 50); 
+    padding: 60px 20px; 
+    text-align: center; /* Центровка содержимого */
+    color: #adff2f; 
+    height: 318.9px;
+}
+
+.hero-content h1 {
+    font-size: 48px; 
+    font-weight: bold; 
+    margin-bottom: 20px; 
+    color: #adff2f; 
+}
+
+.hero-content p {
+    font-size: 18px; /* Размер текста */
+    margin-bottom: 30px; /* Отступ перед кнопкой */
+}
+
+
+.hero-button {
+    background-color: rgb(51, 122, 183); /* Голубая кнопка */
+    background-image: none; /* Убираем изображение фона */
+    border: 0.8px solid rgb(46, 109, 164); /* Обводка кнопки */
+    border-radius: 4px; /* Закругленные углы */
+    box-sizing: border-box; /* Учет отступов и размеров */
+    color: rgb(255, 255, 255); 
+    cursor: pointer; /* Указатель при наведении */
+    display: inline-block; /* Отображение как блочный элемент */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Шрифт */
+    font-size: 14px; 
+    font-weight: 400; /* Толщина текста */
+    height: 33.6px; /* Высота кнопки */
+    line-height: 20px; /* Межстрочный интервал */
+    margin-bottom: 0px; /* Нижний отступ */
+    padding: 6px 12px; /* Внутренние отступы */
+    text-align: center; /* Выравнивание текста по центру */
+    text-decoration: none; /* Убираем подчеркивание */
+    text-size-adjust: 100%; /* Адаптивный размер текста */
+    vertical-align: middle; /* Вертикальное выравнивание */
+    white-space: nowrap; /* Запрет переноса текста */
+    width: 105.775px; 
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Убираем подсветку на мобильных устройствах */
+    transition: background-color 0.3s ease; /* Анимация при наведении */
+}
+
+/* эффект при наведении */
+.hero-button:hover {
+    background-color: rgb(46, 109, 164); /* Более тёмный фон при наведении */
+}
+
+
+.collaboration-header {
+    text-align: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.collaboration-title {
+    display: flex; 
+    justify-content: center; /* Центрирует содержимое по горизонтали */
+    align-items: baseline; /* Выравнивает текст по базовой линии */
+    gap: 10px; /* Расстояние между заголовками */
+}
+
+.collaboration-header h1 {
+    font-size: 36px;
+    color: #000;
+    margin: 0; /* Убирает отступы */
+}
+
+.collaboration-header h2 {
+    font-size: 28px;
+    color: #777;
+    margin: 0; /* Убирает отступы */
+}
+
+.collaboration-header p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 0 auto; /* Центровка текста с отступом сверху */
+}
+
+/* Базовый стиль для ссылки */
+.link-style {
+    text-decoration: none; /* Убираем стандартное подчеркивание */
+    color: rgb(51, 122, 183); 
+    font-weight: bold; /* Жирный текст, как у заголовка */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Плавный переход для эффекта */
+}
+
+/* Эффект при наведении */
+.link-style:hover {
+    text-decoration: underline; /* Добавляем подчеркивание */
+    color: #007BFF; /* Меняем цвет текста при наведении */
+}
+
+
+/* Секция для карточек */
+.collaboration-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Адаптивные карточки */
+    justify-content: center; /* Центрирование сетки по горизонтали */
+    gap: 30px; /* Отступы между карточками */
+    padding: 20px; /* Отступы от краёв страницы */
+    max-width: 1200px; /* Ограничение максимальной ширины */
+    margin: 0 auto; /* Центрирование всей секции по горизонтали */
+}
+
+/* Карточка */
+.card {
+    text-align: center;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+/* Изображение */
+.card img {
+    width: 100%; /* Заполнение карточки по ширине */
+    height: 300px; /* Автоматическая высота */
+    object-fit: cover; /* Обрезка изображения с сохранением пропорций */
+    border-radius: 6px; /* Закруглённые углы */
+}
+
+/* Заголовок и текст */
+.card h3,
+.card p {
+    margin: 10px 0;
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0; /*блок текста внизу */
+    left: 0;
+    width: 100%;
+    height: 50px; /* Фиксированная высота блока текста */
+    background-color: rgba(255, 255, 255, 0.8); 
+    color: rgb(51, 122, 183); /* Цвет шрифта */
+    text-align: center;
+    font-size: 14px; /* Размер шрифта */
+    line-height: 50px; /* Вертикальное центрирование текста */
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    box-sizing: border-box;
+    margin: 0;
+}
+
