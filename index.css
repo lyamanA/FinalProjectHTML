@@ -1,0 +1,20 @@
+@import "reset.css";
+@import "variables.css";
+@import "header.css";
+@import "footer.css";
+@import "main.css";
+@import "about.css";
+@import "products.css";
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, main, footer */
+    grid-template-columns: 100%; /* Одноколоночная структура */
+    min-height: 100vh; /* Высота страницы на весь экран */
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    padding: 10px;
+}

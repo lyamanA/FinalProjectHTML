@@ -1,0 +1,281 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #222;
+    color: #959595;
+    padding: 5px 20px;
+    z-index: 1030;
+    height: 50.8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 10px;
+}
+
+.logo {
+    width: 30px;
+    height: 40px;
+}
+
+.logo-text {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* Навигация */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 10px; /* Смещение от логотипа */
+    flex-grow: 1; /* Заполнить пространство слева */
+    justify-content: flex-start; /* Выровнять элементы слева */
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item.active a {
+    background-color: #000;
+    border-radius: 0px;
+    height: 100%; /* Растянуть по высоте родителя */
+    display: flex;
+    align-items: center; /* Центровка текста по вертикали */
+    color: #fff;
+    width: 100%;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #959595;
+    padding: 10px 15px;
+    transition: color 0.3s;
+    align-items: center;
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    color: rgb(149, 149, 149);
+    box-shadow: rgba(0, 0, 0, 0.176);
+    height: 89.6px;
+    width: 160px;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1000;
+    text-align: left;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: #222;
+    padding: 5px 10px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #ddd;
+}
+
+ 
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto; 
+}
+
+.search-input {
+    width: 200px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+.search-button {
+    padding: 5px 15px;
+    background-color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #ddd;
+}
+
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: absolute; /* Для фиксации */
+    top: 10px; 
+    right: 20px; 
+    background-color: transparent; /* Сделать прозрачным */
+    border: none; /* Убрать фон */
+    z-index: 1030; 
+}
+
+.burger-line {
+    display: none;
+    width: 25px;
+    height: 3px;
+    background-color: #959595;
+    margin: 0px 0; /* Для отступов между полосками */
+    transition: all 0.3s; /* Для анимации при нажатии */
+}
+
+.navbar,
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.burger-toggle {
+    display: none;
+}
+
+.burger-toggle:checked ~ .burger-menu {
+    display: flex;
+}
+
+.burger-toggle:checked ~ .navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #222;
+    padding: 10px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    border-radius: 4px;
+    z-index: 1000;
+    color: #fff;
+}
+
+/* Бургер-меню: поиск смещается вниз */
+.burger-toggle:checked ~ .search-container {
+    position: absolute;
+    top: auto;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #222;
+    z-index: 1000;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex;
+    }
+
+    .burger-line {
+        display: block;
+    }
+
+    .navbar {
+        display: none; 
+    }
+
+    .search-container {
+        display: none; 
+    }
+
+    #burger-toggle:checked ~ .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* элементы слева */
+        gap: 10px;
+        background-color: #222;
+        padding: 10px;
+        position: absolute;
+        top: 50px; /* Сдвигаем вниз, чтобы не накладывалось на бургер */
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        border-radius: 4px;
+        height: 240px; 
+        overflow-y: auto; /* прокрутка, если элементов слишком много */
+    }
+
+    #burger-toggle:checked ~ .search-container {
+        display: flex; 
+        flex-direction: column; 
+        gap: 10px;
+        background-color: #222;
+        padding: 10px;
+        position: absolute;
+        top: 290px; /* Расположим под навбаром */
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        border-radius: 4px;
+        height: 50px; 
+    }
+
+    .nav-item {
+        width: 100%; 
+    } 
+
+    .nav-link {
+        width: 100%; 
+        padding: 10px;
+    }
+
+    .dropdown-menu {
+        position: relative; 
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block; 
+    }
+}
+
