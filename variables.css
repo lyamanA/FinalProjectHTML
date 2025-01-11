@@ -1,0 +1,6 @@
+@import "colors.css";
+@import "sizes.css";
+
+:root {
+    --max-width: 1170px;
+}
