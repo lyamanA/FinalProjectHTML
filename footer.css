@@ -1,0 +1,115 @@
+footer {
+    background-color: var(--button-background);
+    color: white;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px 0px;  /* Внутренние отступы сверху и снизу */
+     /* Внешний отступ сверху */
+    margin-bottom: 0px;
+    
+}
+
+.collab-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    background-color: #d4a017; 
+    padding: 20px; 
+    box-sizing: border-box;
+    gap: 0;
+    height: 400px;
+    
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background-color: transparent; 
+    color: black;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+.cards img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.cards h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.cards p {
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: black;
+}
+
+.cards button {
+    padding: 6px 12px;;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+}
+
+.cards button:hover {
+    background-color: rgb(204, 204, 204);
+    color: black;
+}
+
+/* Добавляем боковые отступы для контента */
+.collab-section {
+    padding-left: 195px;
+    padding-right: 195px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+.footer-grid {
+    display: grid;
+    grid-template-rows: auto auto; /* Две строки */
+    grid-template-columns: 1fr; /* Одна колонка */
+    justify-items: center; /* Центрируем содержимое горизонтально */
+    gap: 10px; /* Расстояние между строками */
+    padding-top: 20px;
+    margin-bottom: 15px;
+    
+}
+
+.footer-links {
+    color: black;
+    margin-bottom: 5px; /* Отступ от нижнего края до текста Copyright */
+    padding: 0;
+    margin-top: 40px;
+}
+
+.footer-links a {
+    color: rgb(51, 122, 183);
+    text-decoration: none;
+    margin: 0px 5px;
+    
+    
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-text {
+    color: rgb(149, 149, 149);
+    font-size: 0.9em;
+    margin-top: 10px;
+    
+}
